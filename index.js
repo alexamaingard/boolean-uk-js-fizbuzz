@@ -3,13 +3,16 @@ const divBy5 = "Buzz";
 const divBy7 = "Fish";
 const divBy8 = "Bus";
 
-for (let i = 1; i < 101; i++){
-    //CHALLENGE 2?
-    if(i%3 == 0 && i%5 == 0 && i%7 == 0 && i%8 == 0) {
-        console.log(i);
-        break;
+for (let i = 1; i < 102; i++){
+    if(i > 100) {
+        let j;
+        for (j = 101; ; j++) {
+            if(j%3 == 0 && j%5 == 0 && j%7 == 0 && j%8 == 0) {
+                break;
+            }
+        }
+        console.log(j);
     }
-    //
     else if (i%3 == 0 && i%5 == 0){
         console.log(divBy3 + divBy5);
     }
